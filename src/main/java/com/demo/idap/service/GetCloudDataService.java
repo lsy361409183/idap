@@ -37,6 +37,9 @@ public class GetCloudDataService {
         return cloudatamapper.getIndexData(cloudcode);
     }
 
-
+    //查询三年（2016、2017、2018）的用户量数据-
+    public List<CloudAllData> getYearsData(){
+        return cloudatamapper.getYearsData();
+    }
 
 }

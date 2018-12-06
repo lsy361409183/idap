@@ -137,7 +137,14 @@ public class CouldController {
                         }
                 return cloudresult3;
         }
+        //查询三年（2016、2017、2018）的用户量数据
+        @RequestMapping(value = {"/getyeardata"})
+        @ResponseBody
+        public List<CloudAllData> getYearsData() throws IOException {
 
+                List<CloudAllData> yeardata = getCloudDataService.getYearsData();
+                return yeardata;
+        }
 
 }
 

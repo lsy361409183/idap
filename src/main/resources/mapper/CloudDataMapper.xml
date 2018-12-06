@@ -26,4 +26,9 @@
   <select id="getIndexChinese" parameterType="int"  resultType="CloudData">
        SELECT  d.INDEXCODE,d.UNIT,d.CHINESENAME FROM [TB_IADP_CLOUDATA2] d where d.CLOUDCODE = ${cloudcode}
     </select>
+
+    <!--查询三年（2016、2017、2018）的用户量数据-->
+    <select id="getYearsData"  resultType="CloudAllData">
+       SELECT  d.DATA,d.YEAR  FROM  [TB_IADP_CLOUDATA3] d where  d.INDEXCODE = 'A001'
+    </select>
 </mapper>
